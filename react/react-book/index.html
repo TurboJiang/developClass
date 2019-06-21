@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+  </div>
+  <script>
+    // wrapper 挂载点 mount 到根节点上
+    const wrapper = document.querySelector('.wrapper');
+    // String -> DOM 
+    // 一次性地把string放到dom中 浏览器的本质 解析字符串 绘制dom节点
+    // 直接用于js操作
+    const createDOMFromString = (domString) => {
+      const div = document.createElement('div');
+      div.innerHTML = domString;
+      return div;
+    }
+    class LikeButton {
+      constructor() {
+        // 所有状态数据 类似data
+        this.state = {
+          isLiked: false
+        }
+      }
+      // 相当于之前的dom  vue template方法 组件内部的模板部分 必备的方法
+      // mvvm的模板 是 dom结构的模板 等待数据往里面套
+      changeLikeText() {
+        // console.log(this.el);
+        // const likeText = this.el.querySelector('.like-text');
+        // this.state.isLiked = !this.state.isLiked;
+        // likeText.innerHTML = this.state.isLiked ? '取消' : '喜欢'
+        // 太多DOM了
+        // 参照小程序 没有DOM,只需维护状态正确 至于界面的更新 由框架来做
+        this.setState({
+          isLiked: !this.state.isLiked
+        })
+      }
+      setState(state) {
+        // 将状态更新
+        // VM 模型(this.state) 与 View视图的实时对应
+        const oldEl = this.el;
+        this.state = state;
+        // 界面状态更新再调用一次render方法 更新el
+        this.el = this.render()
+        // 将DOM更新 组件化思维 自动更新DOM 响应数据变化
+        // 把老的节点从dom树移走 挂上新的节点
+        if (this.onStateChange)
+          this.onStateChange(oldEl, this.el)
+      }
+
+      render() {
+        // 将html模板作为组件放入
+        // renturn -> this.el = 节点变成对象上的属性
+        this.el = createDOMFromString(`
+          <button id="like-btn">
+            <span class="like-text">${this.state.isLiked ? '取消' : '喜欢'}</span>
+          </button>
+        `)
+        // .bind(this) 返回一个新的函数 等下执行 react 组件内部的执行都要.bind(this)
+        this.el.addEventListener('click', this.changeLikeText.bind(this), false)
+        return this.el;
+      }
+      // 通过调用render的方法把 innerHTML挂载到wrapper上
+    }
+    // 实例化
+    const likeButton1 = new LikeButton();
+    wrapper.appendChild(likeButton1.render());
+    likeButton1.onStateChange = (oldEl, newEl) => {
+      // insertBefore 将某个节点插入到某个节点之前
+      // 数据插入之后 重新编译 换掉
+      wrapper.insertBefore(newEl, oldEl);
+      wrapper.removeChild(oldEl);
+    }
+
+    const likeButton2 = new LikeButton();
+    wrapper.appendChild(likeButton2.render());
+
+  </script>
+</body>
+
+</html>
