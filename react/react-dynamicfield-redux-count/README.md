@@ -66,30 +66,21 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-react3.0
- <Router>
-      {/* 返回根路由 拿到Layout */}
-      <Route path="/" component={Layout}>
-        {/* 要配置根路由 */}
-        <Route path="/" component={Layout} />
-        {/* this.props.children 右边栏的页面内容 拿到Table*/}
-        {/* <Route path="/table" component={Table}></Route> */}
-        {/* 拿到Label */}
-        {/* <Route path="/label" component={Label}></Route> */}
-      </Route>
-</Router>
 
-# 路由传参
-1. match.params.id
-    - /post/abcdefg
-2. link to={{
-        pathname：'/table',
-        search:'afs'
-    }}
-    - ?type=all&a=1
 
-# function & class
- function component (dumb component) 根据props渲染 不会依赖任何东西
- class Component (start component) 负责状态管理 复杂 依赖于其他组件
+# redux
+redux
+mobx
+ 应用的状态放在全局的位置
 
- # antd
+ var a = 1
+ 定制了一套更改数据的流程
+#action
+js {}
+干什么 type：'INCREMENT'
+传递数据
+
+# Reducer
+    函数 更新 store
+# store
+    存储数据的地方
