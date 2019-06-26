@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="container">1</span>
+    <button id="button">+</button>
+    <script>
+        function watch(obj1, name, func) {
+            let value = obj1[name];
+            Object.defineProperty(obj1, name, {
+                get: function () {
+                    return value;
+                },
+                set: function (val) {
+                    value = val;
+                    // 监听到值的改变 调用
+                    func(value)
+                }
+            })
+        }
+    </script>
+    <script>
+        var obj = {};
+        // obj.value = false;
+        let value = false
+        Object.defineProperty(obj, 'value', {
+            get: function () {
+                console.log('获取value', value)
+                return value
+            },
+            set: function (val) {
+                console.log('设置了value', val)
+                value = val
+            }
+        })
+        console.log(obj.value);
+        obj.value = true
+        console.log(obj.value)
+
+
+        var obj1 = {
+            value: 1
+        };
+        watch(obj1, 'value', function (newVal) {
+            document.getElementById('container').innerHTML = newVal
+        })
+        document.getElementById('button').addEventListener('click', function () {
+            obj.value += 1
+        })
+    </script>
+    <script>
+        var obj2 = {};
+        Object.defineProperty(obj2,'isLogin',{
+            value:true,
+            enumerable:true,
+            writable:true,
+            configurable:true
+        })
+        console.log(obj2)
+        console.log('keys',Object.keys(obj2));
+        for(let key in obj) {
+            console.log('key',key)
+        }
+        obj2.isLogin = false
+        console.log(obj2)
+        delete obj2.isLogin
+        console.log(obj2)
+    </script>
+</body>
+
+</html>
