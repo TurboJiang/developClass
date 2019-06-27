@@ -6,5 +6,10 @@ high order component
 
 ## 组件
 
-## @ 
+## @
 ES7 里面的 装饰器 decorator
+
+## mobx 管理状态
+cnpm i mobx mobx-react -S
+
+#防抖

@@ -1,8 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import LoginStatus from './LoginStatus';
 import ShopCart from './ShopCart';
-import WithLogin from './WithLogin';
+// import WithLogin from './WithLogin';
+import examplebase from './examplebase/index'
+import ExampleMobx from './exampleMobx/index'
+import ExampleDeBounce from './exampleDeBounce/index'
 import './App.css';
 
 // const WithLoginStatus = WithLogin(LoginStatus);
@@ -11,7 +13,9 @@ function App() {
   return (
     <>
       <LoginStatus />
-      <ShopCart a="1" b="2" />
+      <ShopCart />
+      <ExampleMobx />
+      <ExampleDeBounce />
       {/* <WithLoginStatus />
       <WithShopCart a="1" b="2"/> */}
     </>
