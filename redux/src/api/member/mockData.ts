@@ -1,0 +1,14 @@
+import { MemberEntity } from "../../model";
+// 指定类型
+export const members:MemberEntity[] = [
+    {
+        id:1513,
+        login:"admin",
+        avatar_url:"https://www.baidu.com/link?url=uS81z8kbFFv78Panc_Ne0Pc5JBJ9Jr7tcJ5FMnaFs_h9_j09V3uUSKl2xzQljqp8J_Gc3jWvgGS92_ZUO20xP-r-ygI6yjLKItLiX1c_O3GF9RiOcSf4ToLrsjFbP-mgaKzCs8c_mSWoYlnN63UbMbRLgP1fGi9p2eXMpjTOcmPchE7BVcEx0GYifT1XUQB6r2kTqCPbgStHMGa_MtE-Fi-ZTUywkq5Zw1BvfhHLM5cTJSsqSn2kQ4KnPFK13snH2kE6rdS1nCrLdUYqI8kY4S3VDY1AbfSb7BTezutX1UobWFD5DVYbfk57n8Wpyt8CT798PEnZ4oP2lePqRpKnxn-qe7d23prRcCOxvI3fhyRFxyq5PsZYL15l0M13lTUDXsiGG0CApZxpZrsuxs4O5WXWuYEdEXbY5uemnMG0daABpklJAN_Aj9viYgfiD7BwYFBE8bI7Wd51k1ehF03FS3Pxl5797zQzWaLpD9fGabJ8VGJGGaXVdKqSak533PCMnL8q8XaLLg8ZnwWNH6u0OHFw2uAEEof8-BuPRKXpikxX8iyGccAZuJ_cr9aEsmWGA2xfMtZuqON0DNzdm3Q1Yd0IXBhsVR_SWlY_v5n5gv2q3MnnyV-3jhnKGprdb2YoYzqusCwV33X12g9uhzrv_jQf2xvXbQAKrTy8srY9dreWsHm9cuhWjLUxkCigkAN2yakwhKiX2TLcxJuE_A_5DuXNCLkNNb2EKLLH28awUUjiE_gFHHSxTox8OeoVn219c-cbP45xQJXZLf5Hjic5TK&timg=https%3A%2F%2Fss0.bdstatic.com%2F94oJfD_bAAcT8t7mm9GUKT-xh_%2Ftimg%3Fimage%26quality%3D100%26size%3Db4000_4000%26sec%3D1561970884%26di%3D86d948fe3eb406044de1ce45412be1e4%26src%3Dhttp%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F18%2F01%2F21%2F8262688375431fb088710e53abec4d32.jpg!%2Ffwfh%2F804x804%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&click_t=1561970893519&s_info=1349_624&wd=&eqid=a2ef5883000229fb000000065d19c8c3"
+    },
+    {
+        id:1513,
+        login:"admin",
+        avatar_url:"https://www.baidu.com/link?url=uS81z8kbFFv78Panc_Ne0Pc5JBJ9Jr7tcJ5FMnaFs_h9_j09V3uUSKl2xzQljqp8J_Gc3jWvgGS92_ZUO20xP-r-ygI6yjLKItLiX1c_O3GF9RiOcSf4ToLrsjFbP-mgaKzCs8c_mSWoYlnN63UbMbRLgP1fGi9p2eXMpjTOcmPchE7BVcEx0GYifT1XUQB6r2kTqCPbgStHMGa_MtE-Fi-ZTUywkq5Zw1BvfhHLM5cTJSsqSn2kQ4KnPFK13snH2kE6rdS1nCrLdUYqI8kY4S3VDY1AbfSb7BTezutX1UobWFD5DVYbfk57n8Wpyt8CT798PEnZ4oP2lePqRpKnxn-qe7d23prRcCOxvI3fhyRFxyq5PsZYL15l0M13lTUDXsiGG0CApZxpZrsuxs4O5WXWuYEdEXbY5uemnMG0daABpklJAN_Aj9viYgfiD7BwYFBE8bI7Wd51k1ehF03FS3Pxl5797zQzWaLpD9fGabJ8VGJGGaXVdKqSak533PCMnL8q8XaLLg8ZnwWNH6u0OHFw2uAEEof8-BuPRKXpikxX8iyGccAZuJ_cr9aEsmWGA2xfMtZuqON0DNzdm3Q1Yd0IXBhsVR_SWlY_v5n5gv2q3MnnyV-3jhnKGprdb2YoYzqusCwV33X12g9uhzrv_jQf2xvXbQAKrTy8srY9dreWsHm9cuhWjLUxkCigkAN2yakwhKiX2TLcxJuE_A_5DuXNCLkNNb2EKLLH28awUUjiE_gFHHSxTox8OeoVn219c-cbP45xQJXZLf5Hjic5TK&timg=https%3A%2F%2Fss0.bdstatic.com%2F94oJfD_bAAcT8t7mm9GUKT-xh_%2Ftimg%3Fimage%26quality%3D100%26size%3Db4000_4000%26sec%3D1561970884%26di%3D86d948fe3eb406044de1ce45412be1e4%26src%3Dhttp%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F18%2F01%2F21%2F8262688375431fb088710e53abec4d32.jpg!%2Ffwfh%2F804x804%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&click_t=1561970893519&s_info=1349_624&wd=&eqid=a2ef5883000229fb000000065d19c8c3"
+    }
+]
