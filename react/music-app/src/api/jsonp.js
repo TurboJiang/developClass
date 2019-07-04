@@ -1,11 +1,16 @@
 import originalJsonp from 'jsonp'
-
+import {CODE_SUCCESS} from './config'
 const jsonp = (url, data, option) => {
     return new Promise((resolve, reject) => {
         // buildUrl将传进来的参数拼成一个get的请求方式
         originalJsonp(buildUrl(url, data), option, (err, res) => {
             if (!err) {
-                resolve(res)
+                if(res && res.code ===CODE_SUCCESS ){
+
+                    resolve(res)
+                }else{
+                    reject('接口出错')
+                }
             } else {
                 reject(err)
             }

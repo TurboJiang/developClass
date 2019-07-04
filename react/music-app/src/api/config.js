@@ -1,22 +1,22 @@
-// 轮播的接口
-export const URL = {
-    // 推荐轮播
-    carousel:'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
+const URL = {
+  // 推荐轮播
+  carousel: 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg',
+  // 最新专辑
+  newalbum:'https://u.y.qq.com/cgi-bin/musicu.fcg',
+  /*专辑信息*/
+  albumInfo: "https://c.y.qq.com/v8/fcg-bin/fcg_v8_album_info_cp.fcg",
+
 }
 
-// 参数配置
-// format=jsonp&inCharset=utf-8&outCharset=utf-8&notice=0
-export const PARAM = {
-    format:"jsonp",
-    inCharset:"utf-8",
-    outCharset:"utf-8",
-    notice:0
+const PARAM = {
+  format: "jsonp",
+  inCharset:"utf-8",
+  outCharset: "utf-8",
+  notice: 0
 }
-// 回调配置
-// jsonpCallback=callback
-export const OPTION = {
-    param:'jsonpCallback',
-    prefix:'callback'
+const OPTION = {
+  param: 'jsonpCallback',
+  prefix: 'callback'
 }
-
-export const CODE_SUCCESS = 0
+const CODE_SUCCESS = 0;
+export {URL,PARAM,OPTION,CODE_SUCCESS}
