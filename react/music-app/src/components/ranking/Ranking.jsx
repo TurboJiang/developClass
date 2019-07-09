@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-
 class Ranking extends Component {
-  render() {
+  state = {  }
+  render() { 
     return (
       <div>
-        rank
+        Ranking
       </div>
-    );
+     );
   }
 }
-
+ 
 export default Ranking;

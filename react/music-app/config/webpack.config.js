@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const isWsl = require('is-wsl');
@@ -315,7 +315,6 @@ module.exports = function(webpackEnv) {
           ],
           include: paths.appSrc,
         },
-      
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
@@ -439,7 +438,6 @@ module.exports = function(webpackEnv) {
               // See https://github.com/webpack/webpack/issues/6571
               sideEffects: true,
             },
-           
             // Adds support for CSS Modules, but using SASS
             // using the extension .module.scss or .module.sass
             {
@@ -455,11 +453,9 @@ module.exports = function(webpackEnv) {
               ),
             },
             {
-          
               test: /\.styl$/,
               use: ["style-loader", "css-loader", "stylus-loader"]
-           
-           },
+            },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.

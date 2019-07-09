@@ -1,5 +1,6 @@
-import jsonp from './jsonp'
-import { URL, PARAM, OPTION } from './config'
+import jsonp from './jsonp';
+import { URL, PARAM, OPTION } from './config';
+
 export function getCarousel() {
   return jsonp(
     URL.carousel,
@@ -14,6 +15,7 @@ export function getCarousel() {
     OPTION
   )
 }
+
 export function getNewAlbum() {
   return jsonp(
     URL.newalbum,
@@ -31,7 +33,7 @@ export function getNewAlbum() {
     }
   )
 }
-export function getAlbumInfo(mid) {
+export function getAlbuminfo(mid) {
   return jsonp(
     URL.albumInfo,
     {
@@ -42,8 +44,9 @@ export function getAlbumInfo(mid) {
       hostUin: 0,
       platform: 'yqq.json',
       needNewCode: 0
-
     },
     OPTION
   )
 }
+// ?jsonpCallback=callback1
+// ?callback=callback1

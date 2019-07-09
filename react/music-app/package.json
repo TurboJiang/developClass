@@ -57,7 +57,6 @@
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
     "style-loader": "0.23.1",
-    "stylus-loader": "^3.0.2",
     "swiper": "^4.5.0",
     "terser-webpack-plugin": "1.2.3",
     "ts-pnp": "1.1.2",
@@ -110,7 +109,10 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
       "^.+\\.module\\.(css|sass|scss)$"
     ],
-    "modulePaths": [],
+    "modulePaths": [
+      "/Users/zhaomeng/npm/lib/node_modules",
+      "/Users/zhaomeng/npm/lib/node_modules"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
@@ -138,6 +140,7 @@
     ]
   },
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
   }
 }
