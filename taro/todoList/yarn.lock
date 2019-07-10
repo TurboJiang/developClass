@@ -156,6 +156,14 @@
   dependencies:
     uglify-js "^3.3.24"
 
+"@tarojs/redux@^1.3.6":
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@tarojs/redux/-/redux-1.3.6.tgz#f3cc943a4d697a050d1fad5233c00f86dc3fcc46"
+  integrity sha512-kEmKtiDeCXtgMS8KQkCzkU7OtoKTCz34njhG1vliUFi7aSRuRERImfAgieBILhVFW27h7iN/788qbPPPWlOyjw==
+  dependencies:
+    "@tarojs/taro" "1.3.6"
+    "@tarojs/utils" "1.3.6"
+
 "@tarojs/router@1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-1.3.6.tgz#7ca35bc8e79012679d2b1e6a284c8601cf531331"
@@ -2416,6 +2424,11 @@ decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+
+deep-diff@^0.3.5:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
+  integrity sha1-wB3mPvsO7JeYgB1Ax+Da4ltYLIQ=
 
 deep-equal@^1.0.1:
   version "1.0.1"
@@ -6416,6 +6429,21 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
+redux-logger@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
+  integrity sha1-91VZZvMJjzyIYExEnPC69XeCdL8=
+  dependencies:
+    deep-diff "^0.3.5"
+
+redux@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.2.tgz#597cc660a99f91412e31c96c3da10ed8ace0715d"
+  integrity sha512-oAiFLWYQhbpSvzjcVfgQ90MlZ0u6uDIHFK41Q0/BnCfjEg96SACzwUFwDVUKz/LP/SwJORGaFY8AM5wOB/zf0A==
+  dependencies:
+    loose-envify "^1.4.0"
+    symbol-observable "^1.2.0"
+
 regenerate@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
@@ -7453,6 +7481,11 @@ swiper@^4.4.2:
   dependencies:
     dom7 "^2.1.3"
     ssr-window "^1.0.1"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+  integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
 table@^4.0.1:
   version "4.0.3"

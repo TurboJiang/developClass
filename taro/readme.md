@@ -4,6 +4,7 @@ cnpm install -g @tarojs/cli
 taro -V
 cd todoList
 npm run dev:weapp
+yarn add redux @tarojs/redux redux-logger(中间件)
 
 - 小程序为什么要用框架呢？
 1. 小程序内置的组件 vue/react学习成本
